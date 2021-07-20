@@ -36,7 +36,7 @@ create_bind_cache_dir() {
   chown root:${BIND_USER} /var/cache/bind
 }
 
-create_bind_data_dir
+create_pid_dir
 create_bind_cache_dir
 
 # allow arguments to be passed to named
