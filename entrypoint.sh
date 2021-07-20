@@ -51,6 +51,7 @@ fi
 # default behaviour is to launch named
 if [[ -z ${1} ]]; then
   echo "Starting named..."
+  echo "$(command -v named) -u ${BIND_USER} -g ${EXTRA_ARGS}"  
   exec "$(command -v named)" -u ${BIND_USER} -g ${EXTRA_ARGS}
 else
   exec "$@"
